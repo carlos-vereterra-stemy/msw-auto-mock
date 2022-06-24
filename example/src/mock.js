@@ -822,7 +822,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -989,7 +989,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -1320,7 +1320,7 @@ export const handlers = [
           ].map(_ => ({
             id: 1,
             account: null,
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -1394,7 +1394,7 @@ export const handlers = [
         ctx.json({
           id: 1,
           account: null,
-          repository_selection: faker.random.arrayElement(['all', 'selected']),
+          repository_selection: faker.helpers.arrayElement(['all', 'selected']),
           access_tokens_url:
             'https://api.github.com/installations/1/access_tokens',
           repositories_url: 'https://api.github.com/installation/repositories',
@@ -1505,7 +1505,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -2195,7 +2195,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -2326,7 +2326,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -2477,7 +2477,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -2631,7 +2631,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -2748,7 +2748,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -2946,7 +2946,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -3079,7 +3079,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -3229,7 +3229,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -3326,7 +3326,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -3470,7 +3470,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -3569,7 +3569,7 @@ export const handlers = [
                 deployments: 'write',
                 single_file: 'read',
               },
-              repository_selection: faker.random.arrayElement([
+              repository_selection: faker.helpers.arrayElement([
                 'all',
                 'selected',
               ]),
@@ -3693,7 +3693,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -3815,7 +3815,7 @@ export const handlers = [
               deployments: 'write',
               single_file: 'read',
             },
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -4232,13 +4232,13 @@ export const handlers = [
         [
           ctx.status(200),
           ctx.json({
-            enabled_organizations: faker.random.arrayElement([
+            enabled_organizations: faker.helpers.arrayElement([
               'all',
               'none',
               'selected',
             ]),
             selected_organizations_url: faker.internet.url(),
-            allowed_actions: faker.random.arrayElement([
+            allowed_actions: faker.helpers.arrayElement([
               'all',
               'local_only',
               'selected',
@@ -4529,7 +4529,7 @@ export const handlers = [
               ].map(_ => ({
                 id: faker.datatype.number(),
                 name: faker.name.findName(),
-                type: faker.random.arrayElement(['read-only', 'custom']),
+                type: faker.helpers.arrayElement(['read-only', 'custom']),
               })),
             })),
           }),
@@ -4588,7 +4588,7 @@ export const handlers = [
               ].map(_ => ({
                 id: faker.datatype.number(),
                 name: faker.name.findName(),
-                type: faker.random.arrayElement(['read-only', 'custom']),
+                type: faker.helpers.arrayElement(['read-only', 'custom']),
               })),
             })),
           }),
@@ -4951,7 +4951,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:42Z"',
             })),
             single_file: 'config.yaml',
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -5289,7 +5289,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:42Z"',
             })),
             single_file: 'config.yaml',
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -5319,7 +5319,7 @@ export const handlers = [
             ].map(_ => ({
               id: faker.datatype.number(),
               name: faker.name.findName(),
-              type: faker.random.arrayElement(['read-only', 'custom']),
+              type: faker.helpers.arrayElement(['read-only', 'custom']),
             })),
           }),
         ],
@@ -12000,13 +12000,13 @@ export const handlers = [
       [
         ctx.status(200),
         ctx.json({
-          enabled_repositories: faker.random.arrayElement([
+          enabled_repositories: faker.helpers.arrayElement([
             'all',
             'none',
             'selected',
           ]),
           selected_repositories_url: faker.internet.url(),
-          allowed_actions: faker.random.arrayElement([
+          allowed_actions: faker.helpers.arrayElement([
             'all',
             'local_only',
             'selected',
@@ -13064,7 +13064,7 @@ export const handlers = [
               ].map(_ => ({
                 id: faker.datatype.number(),
                 name: faker.name.findName(),
-                type: faker.random.arrayElement(['read-only', 'custom']),
+                type: faker.helpers.arrayElement(['read-only', 'custom']),
               })),
             })),
           }),
@@ -13121,7 +13121,7 @@ export const handlers = [
             ].map(_ => ({
               id: faker.datatype.number(),
               name: faker.name.findName(),
-              type: faker.random.arrayElement(['read-only', 'custom']),
+              type: faker.helpers.arrayElement(['read-only', 'custom']),
             })),
           })),
         }),
@@ -13483,7 +13483,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:42Z"',
             })),
             single_file: 'config.yaml',
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -13821,7 +13821,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:42Z"',
             })),
             single_file: 'config.yaml',
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -13851,7 +13851,7 @@ export const handlers = [
             ].map(_ => ({
               id: faker.datatype.number(),
               name: faker.name.findName(),
-              type: faker.random.arrayElement(['read-only', 'custom']),
+              type: faker.helpers.arrayElement(['read-only', 'custom']),
             })),
           }),
         ],
@@ -13882,7 +13882,7 @@ export const handlers = [
             name: 'SECRET_TOKEN',
             created_at: faker.date.past(),
             updated_at: faker.date.past(),
-            visibility: faker.random.arrayElement([
+            visibility: faker.helpers.arrayElement([
               'all',
               'private',
               'selected',
@@ -13926,7 +13926,7 @@ export const handlers = [
             name: 'SECRET_TOKEN',
             created_at: faker.date.past(),
             updated_at: faker.date.past(),
-            visibility: faker.random.arrayElement([
+            visibility: faker.helpers.arrayElement([
               'all',
               'private',
               'selected',
@@ -15750,7 +15750,7 @@ export const handlers = [
         ctx.json({
           id: 1,
           account: null,
-          repository_selection: faker.random.arrayElement(['all', 'selected']),
+          repository_selection: faker.helpers.arrayElement(['all', 'selected']),
           access_tokens_url:
             'https://api.github.com/installations/1/access_tokens',
           repositories_url: 'https://api.github.com/installation/repositories',
@@ -15824,7 +15824,7 @@ export const handlers = [
           ].map(_ => ({
             id: 1,
             account: null,
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -16972,7 +16972,7 @@ export const handlers = [
             },
             created_at: '2011-04-10T20:09:31Z',
             updated_at: '2014-03-03T18:58:10Z',
-            organization_permission: faker.random.arrayElement([
+            organization_permission: faker.helpers.arrayElement([
               'read',
               'write',
               'admin',
@@ -17044,7 +17044,7 @@ export const handlers = [
           },
           created_at: '2011-04-10T20:09:31Z',
           updated_at: '2014-03-03T18:58:10Z',
-          organization_permission: faker.random.arrayElement([
+          organization_permission: faker.helpers.arrayElement([
             'read',
             'write',
             'admin',
@@ -18027,8 +18027,8 @@ export const handlers = [
             url: faker.internet.url(),
             html_url: faker.internet.url(),
             locations_url: faker.internet.url(),
-            state: faker.random.arrayElement(['open', 'resolved']),
-            resolution: faker.random.arrayElement([
+            state: faker.helpers.arrayElement(['open', 'resolved']),
+            resolution: faker.helpers.arrayElement([
               null,
               'false_positive',
               'wont_fix',
@@ -19913,7 +19913,7 @@ export const handlers = [
           ctx.json({
             url: faker.internet.url(),
             role: 'member',
-            state: faker.random.arrayElement(['active', 'pending']),
+            state: faker.helpers.arrayElement(['active', 'pending']),
           }),
         ],
         [ctx.status(404), ctx.json(null)],
@@ -19931,7 +19931,7 @@ export const handlers = [
           ctx.json({
             url: faker.internet.url(),
             role: 'member',
-            state: faker.random.arrayElement(['active', 'pending']),
+            state: faker.helpers.arrayElement(['active', 'pending']),
           }),
         ],
         [ctx.status(403), ctx.json(null)],
@@ -21793,7 +21793,7 @@ export const handlers = [
           },
           created_at: '2011-04-10T20:09:31Z',
           updated_at: '2014-03-03T18:58:10Z',
-          organization_permission: faker.random.arrayElement([
+          organization_permission: faker.helpers.arrayElement([
             'read',
             'write',
             'admin',
@@ -21871,7 +21871,7 @@ export const handlers = [
           },
           created_at: '2011-04-10T20:09:31Z',
           updated_at: '2014-03-03T18:58:10Z',
-          organization_permission: faker.random.arrayElement([
+          organization_permission: faker.helpers.arrayElement([
             'read',
             'write',
             'admin',
@@ -23593,10 +23593,10 @@ export const handlers = [
           },
           security_and_analysis: {
             advanced_security: {
-              status: faker.random.arrayElement(['enabled', 'disabled']),
+              status: faker.helpers.arrayElement(['enabled', 'disabled']),
             },
             secret_scanning: {
-              status: faker.random.arrayElement(['enabled', 'disabled']),
+              status: faker.helpers.arrayElement(['enabled', 'disabled']),
             },
           },
         }),
@@ -24751,10 +24751,10 @@ export const handlers = [
           },
           security_and_analysis: {
             advanced_security: {
-              status: faker.random.arrayElement(['enabled', 'disabled']),
+              status: faker.helpers.arrayElement(['enabled', 'disabled']),
             },
             secret_scanning: {
-              status: faker.random.arrayElement(['enabled', 'disabled']),
+              status: faker.helpers.arrayElement(['enabled', 'disabled']),
             },
           },
         }),
@@ -24977,7 +24977,7 @@ export const handlers = [
           ctx.status(200),
           ctx.json({
             enabled: faker.datatype.boolean(),
-            allowed_actions: faker.random.arrayElement([
+            allowed_actions: faker.helpers.arrayElement([
               'all',
               'local_only',
               'selected',
@@ -25049,7 +25049,7 @@ export const handlers = [
             ].map(_ => ({
               id: faker.datatype.number(),
               name: faker.name.findName(),
-              type: faker.random.arrayElement(['read-only', 'custom']),
+              type: faker.helpers.arrayElement(['read-only', 'custom']),
             })),
           })),
         }),
@@ -25411,7 +25411,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:42Z"',
             })),
             single_file: 'config.yaml',
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -25749,7 +25749,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:42Z"',
             })),
             single_file: 'config.yaml',
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -25779,7 +25779,7 @@ export const handlers = [
             ].map(_ => ({
               id: faker.datatype.number(),
               name: faker.name.findName(),
-              type: faker.random.arrayElement(['read-only', 'custom']),
+              type: faker.helpers.arrayElement(['read-only', 'custom']),
             })),
           }),
         ],
@@ -37164,7 +37164,7 @@ export const handlers = [
               url: faker.internet.url(),
               html_url: faker.internet.url(),
               instances_url: faker.internet.url(),
-              state: faker.random.arrayElement([
+              state: faker.helpers.arrayElement([
                 'open',
                 'closed',
                 'dismissed',
@@ -37200,7 +37200,7 @@ export const handlers = [
                 starred_at: '"2020-07-09T00:17:55Z"',
               },
               dismissed_at: faker.date.past(),
-              dismissed_reason: faker.random.arrayElement([
+              dismissed_reason: faker.helpers.arrayElement([
                 null,
                 'false positive',
                 "won't fix",
@@ -37209,7 +37209,7 @@ export const handlers = [
               rule: {
                 id: faker.lorem.slug(1),
                 name: faker.name.findName(),
-                severity: faker.random.arrayElement([
+                severity: faker.helpers.arrayElement([
                   'none',
                   'note',
                   'warning',
@@ -37227,7 +37227,7 @@ export const handlers = [
                 analysis_key: faker.lorem.slug(1),
                 environment: faker.lorem.slug(1),
                 category: faker.lorem.slug(1),
-                state: faker.random.arrayElement([
+                state: faker.helpers.arrayElement([
                   'open',
                   'closed',
                   'dismissed',
@@ -37250,7 +37250,7 @@ export const handlers = [
                     faker.datatype.number({ max: MAX_ARRAY_LENGTH })
                   ).keys(),
                 ].map(_ =>
-                  faker.random.arrayElement([
+                  faker.helpers.arrayElement([
                     'source',
                     'generated',
                     'test',
@@ -37304,7 +37304,7 @@ export const handlers = [
             url: faker.internet.url(),
             html_url: faker.internet.url(),
             instances_url: faker.internet.url(),
-            state: faker.random.arrayElement([
+            state: faker.helpers.arrayElement([
               'open',
               'closed',
               'dismissed',
@@ -37339,7 +37339,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:55Z"',
             },
             dismissed_at: faker.date.past(),
-            dismissed_reason: faker.random.arrayElement([
+            dismissed_reason: faker.helpers.arrayElement([
               null,
               'false positive',
               "won't fix",
@@ -37348,13 +37348,13 @@ export const handlers = [
             rule: {
               id: faker.lorem.slug(1),
               name: faker.name.findName(),
-              severity: faker.random.arrayElement([
+              severity: faker.helpers.arrayElement([
                 'none',
                 'note',
                 'warning',
                 'error',
               ]),
-              security_severity_level: faker.random.arrayElement([
+              security_severity_level: faker.helpers.arrayElement([
                 'low',
                 'medium',
                 'high',
@@ -37379,7 +37379,7 @@ export const handlers = [
               analysis_key: faker.lorem.slug(1),
               environment: faker.lorem.slug(1),
               category: faker.lorem.slug(1),
-              state: faker.random.arrayElement([
+              state: faker.helpers.arrayElement([
                 'open',
                 'closed',
                 'dismissed',
@@ -37402,7 +37402,7 @@ export const handlers = [
                   faker.datatype.number({ max: MAX_ARRAY_LENGTH })
                 ).keys(),
               ].map(_ =>
-                faker.random.arrayElement([
+                faker.helpers.arrayElement([
                   'source',
                   'generated',
                   'test',
@@ -37455,7 +37455,7 @@ export const handlers = [
             url: faker.internet.url(),
             html_url: faker.internet.url(),
             instances_url: faker.internet.url(),
-            state: faker.random.arrayElement([
+            state: faker.helpers.arrayElement([
               'open',
               'closed',
               'dismissed',
@@ -37490,7 +37490,7 @@ export const handlers = [
               starred_at: '"2020-07-09T00:17:55Z"',
             },
             dismissed_at: faker.date.past(),
-            dismissed_reason: faker.random.arrayElement([
+            dismissed_reason: faker.helpers.arrayElement([
               null,
               'false positive',
               "won't fix",
@@ -37499,13 +37499,13 @@ export const handlers = [
             rule: {
               id: faker.lorem.slug(1),
               name: faker.name.findName(),
-              severity: faker.random.arrayElement([
+              severity: faker.helpers.arrayElement([
                 'none',
                 'note',
                 'warning',
                 'error',
               ]),
-              security_severity_level: faker.random.arrayElement([
+              security_severity_level: faker.helpers.arrayElement([
                 'low',
                 'medium',
                 'high',
@@ -37530,7 +37530,7 @@ export const handlers = [
               analysis_key: faker.lorem.slug(1),
               environment: faker.lorem.slug(1),
               category: faker.lorem.slug(1),
-              state: faker.random.arrayElement([
+              state: faker.helpers.arrayElement([
                 'open',
                 'closed',
                 'dismissed',
@@ -37553,7 +37553,7 @@ export const handlers = [
                   faker.datatype.number({ max: MAX_ARRAY_LENGTH })
                 ).keys(),
               ].map(_ =>
-                faker.random.arrayElement([
+                faker.helpers.arrayElement([
                   'source',
                   'generated',
                   'test',
@@ -37610,7 +37610,7 @@ export const handlers = [
               analysis_key: faker.lorem.slug(1),
               environment: faker.lorem.slug(1),
               category: faker.lorem.slug(1),
-              state: faker.random.arrayElement([
+              state: faker.helpers.arrayElement([
                 'open',
                 'closed',
                 'dismissed',
@@ -37633,7 +37633,7 @@ export const handlers = [
                   faker.datatype.number({ max: MAX_ARRAY_LENGTH })
                 ).keys(),
               ].map(_ =>
-                faker.random.arrayElement([
+                faker.helpers.arrayElement([
                   'source',
                   'generated',
                   'test',
@@ -37900,7 +37900,7 @@ export const handlers = [
         [
           ctx.status(200),
           ctx.json({
-            processing_status: faker.random.arrayElement([
+            processing_status: faker.helpers.arrayElement([
               'pending',
               'complete',
             ]),
@@ -40508,7 +40508,7 @@ export const handlers = [
                   site_admin: faker.datatype.boolean(),
                   starred_at: '"2020-07-09T00:17:55Z"',
                 },
-                merge_method: faker.random.arrayElement([
+                merge_method: faker.helpers.arrayElement([
                   'merge',
                   'squash',
                   'rebase',
@@ -46244,10 +46244,10 @@ export const handlers = [
           },
           security_and_analysis: {
             advanced_security: {
-              status: faker.random.arrayElement(['enabled', 'disabled']),
+              status: faker.helpers.arrayElement(['enabled', 'disabled']),
             },
             secret_scanning: {
-              status: faker.random.arrayElement(['enabled', 'disabled']),
+              status: faker.helpers.arrayElement(['enabled', 'disabled']),
             },
           },
         }),
@@ -47457,7 +47457,7 @@ export const handlers = [
         ctx.json({
           id: 1,
           account: null,
-          repository_selection: faker.random.arrayElement(['all', 'selected']),
+          repository_selection: faker.helpers.arrayElement(['all', 'selected']),
           access_tokens_url:
             'https://api.github.com/installations/1/access_tokens',
           repositories_url: 'https://api.github.com/installation/repositories',
@@ -55795,7 +55795,7 @@ export const handlers = [
         ctx.status(200),
         ctx.json({
           message: faker.lorem.slug(1),
-          merge_type: faker.random.arrayElement([
+          merge_type: faker.helpers.arrayElement([
             'merge',
             'fast-forward',
             'none',
@@ -57297,7 +57297,7 @@ export const handlers = [
             },
             created_at: '2011-04-10T20:09:31Z',
             updated_at: '2014-03-03T18:58:10Z',
-            organization_permission: faker.random.arrayElement([
+            organization_permission: faker.helpers.arrayElement([
               'read',
               'write',
               'admin',
@@ -57405,7 +57405,7 @@ export const handlers = [
           },
           created_at: '2011-04-10T20:09:31Z',
           updated_at: '2014-03-03T18:58:10Z',
-          organization_permission: faker.random.arrayElement([
+          organization_permission: faker.helpers.arrayElement([
             'read',
             'write',
             'admin',
@@ -58489,7 +58489,7 @@ export const handlers = [
                 site_admin: faker.datatype.boolean(),
                 starred_at: '"2020-07-09T00:17:55Z"',
               },
-              merge_method: faker.random.arrayElement([
+              merge_method: faker.helpers.arrayElement([
                 'merge',
                 'squash',
                 'rebase',
@@ -59101,7 +59101,7 @@ export const handlers = [
               site_admin: faker.datatype.boolean(),
               starred_at: '"2020-07-09T00:17:55Z"',
             },
-            merge_method: faker.random.arrayElement([
+            merge_method: faker.helpers.arrayElement([
               'merge',
               'squash',
               'rebase',
@@ -59253,10 +59253,10 @@ export const handlers = [
             },
             start_line: 2,
             original_start_line: 2,
-            start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             line: 2,
             original_line: 2,
-            side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             reactions: {
               url: faker.internet.url(),
               total_count: faker.datatype.number(),
@@ -59346,10 +59346,10 @@ export const handlers = [
             },
             start_line: 2,
             original_start_line: 2,
-            start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             line: 2,
             original_line: 2,
-            side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             reactions: {
               url: faker.internet.url(),
               total_count: faker.datatype.number(),
@@ -59448,10 +59448,10 @@ export const handlers = [
             },
             start_line: 2,
             original_start_line: 2,
-            start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             line: 2,
             original_line: 2,
-            side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             reactions: {
               url: faker.internet.url(),
               total_count: faker.datatype.number(),
@@ -60249,7 +60249,7 @@ export const handlers = [
                 site_admin: faker.datatype.boolean(),
                 starred_at: '"2020-07-09T00:17:55Z"',
               },
-              merge_method: faker.random.arrayElement([
+              merge_method: faker.helpers.arrayElement([
                 'merge',
                 'squash',
                 'rebase',
@@ -60908,7 +60908,7 @@ export const handlers = [
                 site_admin: faker.datatype.boolean(),
                 starred_at: '"2020-07-09T00:17:55Z"',
               },
-              merge_method: faker.random.arrayElement([
+              merge_method: faker.helpers.arrayElement([
                 'merge',
                 'squash',
                 'rebase',
@@ -61065,10 +61065,10 @@ export const handlers = [
               },
               start_line: 2,
               original_start_line: 2,
-              start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+              start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
               line: 2,
               original_line: 2,
-              side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+              side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
               reactions: {
                 url: faker.internet.url(),
                 total_count: faker.datatype.number(),
@@ -61159,10 +61159,10 @@ export const handlers = [
             },
             start_line: 2,
             original_start_line: 2,
-            start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             line: 2,
             original_line: 2,
-            side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             reactions: {
               url: faker.internet.url(),
               total_count: faker.datatype.number(),
@@ -61280,10 +61280,10 @@ export const handlers = [
             },
             start_line: 2,
             original_start_line: 2,
-            start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             line: 2,
             original_line: 2,
-            side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+            side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
             reactions: {
               url: faker.internet.url(),
               total_count: faker.datatype.number(),
@@ -62709,7 +62709,7 @@ export const handlers = [
                 site_admin: faker.datatype.boolean(),
                 starred_at: '"2020-07-09T00:17:55Z"',
               },
-              merge_method: faker.random.arrayElement([
+              merge_method: faker.helpers.arrayElement([
                 'merge',
                 'squash',
                 'rebase',
@@ -63755,7 +63755,7 @@ export const handlers = [
                 site_admin: faker.datatype.boolean(),
                 starred_at: '"2020-07-09T00:17:55Z"',
               },
-              merge_method: faker.random.arrayElement([
+              merge_method: faker.helpers.arrayElement([
                 'merge',
                 'squash',
                 'rebase',
@@ -64261,8 +64261,8 @@ export const handlers = [
                 eyes: faker.datatype.number(),
                 rocket: faker.datatype.number(),
               },
-              side: faker.random.arrayElement(['LEFT', 'RIGHT']),
-              start_side: faker.random.arrayElement(['LEFT', 'RIGHT']),
+              side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
+              start_side: faker.helpers.arrayElement(['LEFT', 'RIGHT']),
               line: 2,
               original_line: 2,
               start_line: 2,
@@ -64684,7 +64684,7 @@ export const handlers = [
               node_id: faker.lorem.slug(1),
               name: 'Team Environment',
               label: faker.lorem.slug(1),
-              state: faker.random.arrayElement(['uploaded', 'open']),
+              state: faker.helpers.arrayElement(['uploaded', 'open']),
               content_type: faker.lorem.slug(1),
               size: faker.datatype.number(),
               download_count: faker.datatype.number(),
@@ -64810,7 +64810,7 @@ export const handlers = [
             node_id: faker.lorem.slug(1),
             name: 'Team Environment',
             label: faker.lorem.slug(1),
-            state: faker.random.arrayElement(['uploaded', 'open']),
+            state: faker.helpers.arrayElement(['uploaded', 'open']),
             content_type: faker.lorem.slug(1),
             size: faker.datatype.number(),
             download_count: faker.datatype.number(),
@@ -64898,7 +64898,7 @@ export const handlers = [
             node_id: faker.lorem.slug(1),
             name: 'Team Environment',
             label: faker.lorem.slug(1),
-            state: faker.random.arrayElement(['uploaded', 'open']),
+            state: faker.helpers.arrayElement(['uploaded', 'open']),
             content_type: faker.lorem.slug(1),
             size: faker.datatype.number(),
             download_count: faker.datatype.number(),
@@ -64969,7 +64969,7 @@ export const handlers = [
             node_id: faker.lorem.slug(1),
             name: 'Team Environment',
             label: faker.lorem.slug(1),
-            state: faker.random.arrayElement(['uploaded', 'open']),
+            state: faker.helpers.arrayElement(['uploaded', 'open']),
             content_type: faker.lorem.slug(1),
             size: faker.datatype.number(),
             download_count: faker.datatype.number(),
@@ -65102,7 +65102,7 @@ export const handlers = [
             node_id: faker.lorem.slug(1),
             name: 'Team Environment',
             label: faker.lorem.slug(1),
-            state: faker.random.arrayElement(['uploaded', 'open']),
+            state: faker.helpers.arrayElement(['uploaded', 'open']),
             content_type: faker.lorem.slug(1),
             size: faker.datatype.number(),
             download_count: faker.datatype.number(),
@@ -65220,7 +65220,7 @@ export const handlers = [
               node_id: faker.lorem.slug(1),
               name: 'Team Environment',
               label: faker.lorem.slug(1),
-              state: faker.random.arrayElement(['uploaded', 'open']),
+              state: faker.helpers.arrayElement(['uploaded', 'open']),
               content_type: faker.lorem.slug(1),
               size: faker.datatype.number(),
               download_count: faker.datatype.number(),
@@ -65349,7 +65349,7 @@ export const handlers = [
               node_id: faker.lorem.slug(1),
               name: 'Team Environment',
               label: faker.lorem.slug(1),
-              state: faker.random.arrayElement(['uploaded', 'open']),
+              state: faker.helpers.arrayElement(['uploaded', 'open']),
               content_type: faker.lorem.slug(1),
               size: faker.datatype.number(),
               download_count: faker.datatype.number(),
@@ -65478,7 +65478,7 @@ export const handlers = [
               node_id: faker.lorem.slug(1),
               name: 'Team Environment',
               label: faker.lorem.slug(1),
-              state: faker.random.arrayElement(['uploaded', 'open']),
+              state: faker.helpers.arrayElement(['uploaded', 'open']),
               content_type: faker.lorem.slug(1),
               size: faker.datatype.number(),
               download_count: faker.datatype.number(),
@@ -65562,7 +65562,7 @@ export const handlers = [
               node_id: faker.lorem.slug(1),
               name: 'Team Environment',
               label: faker.lorem.slug(1),
-              state: faker.random.arrayElement(['uploaded', 'open']),
+              state: faker.helpers.arrayElement(['uploaded', 'open']),
               content_type: faker.lorem.slug(1),
               size: faker.datatype.number(),
               download_count: faker.datatype.number(),
@@ -65618,7 +65618,7 @@ export const handlers = [
             node_id: faker.lorem.slug(1),
             name: 'Team Environment',
             label: faker.lorem.slug(1),
-            state: faker.random.arrayElement(['uploaded', 'open']),
+            state: faker.helpers.arrayElement(['uploaded', 'open']),
             content_type: faker.lorem.slug(1),
             size: faker.datatype.number(),
             download_count: faker.datatype.number(),
@@ -65779,8 +65779,8 @@ export const handlers = [
               url: faker.internet.url(),
               html_url: faker.internet.url(),
               locations_url: faker.internet.url(),
-              state: faker.random.arrayElement(['open', 'resolved']),
-              resolution: faker.random.arrayElement([
+              state: faker.helpers.arrayElement(['open', 'resolved']),
+              resolution: faker.helpers.arrayElement([
                 null,
                 'false_positive',
                 'wont_fix',
@@ -65848,8 +65848,8 @@ export const handlers = [
             url: faker.internet.url(),
             html_url: faker.internet.url(),
             locations_url: faker.internet.url(),
-            state: faker.random.arrayElement(['open', 'resolved']),
-            resolution: faker.random.arrayElement([
+            state: faker.helpers.arrayElement(['open', 'resolved']),
+            resolution: faker.helpers.arrayElement([
               null,
               'false_positive',
               'wont_fix',
@@ -65916,8 +65916,8 @@ export const handlers = [
             url: faker.internet.url(),
             html_url: faker.internet.url(),
             locations_url: faker.internet.url(),
-            state: faker.random.arrayElement(['open', 'resolved']),
-            resolution: faker.random.arrayElement([
+            state: faker.helpers.arrayElement(['open', 'resolved']),
+            resolution: faker.helpers.arrayElement([
               null,
               'false_positive',
               'wont_fix',
@@ -71705,7 +71705,7 @@ export const handlers = [
           ctx.json({
             url: faker.internet.url(),
             role: 'member',
-            state: faker.random.arrayElement(['active', 'pending']),
+            state: faker.helpers.arrayElement(['active', 'pending']),
           }),
         ],
         [
@@ -71731,7 +71731,7 @@ export const handlers = [
           ctx.json({
             url: faker.internet.url(),
             role: 'member',
-            state: faker.random.arrayElement(['active', 'pending']),
+            state: faker.helpers.arrayElement(['active', 'pending']),
           }),
         ],
         [ctx.status(403), ctx.json(null)],
@@ -73924,7 +73924,7 @@ export const handlers = [
           ].map(_ => ({
             id: 1,
             account: null,
-            repository_selection: faker.random.arrayElement([
+            repository_selection: faker.helpers.arrayElement([
               'all',
               'selected',
             ]),
@@ -75593,7 +75593,7 @@ export const handlers = [
           },
           created_at: '2011-04-10T20:09:31Z',
           updated_at: '2014-03-03T18:58:10Z',
-          organization_permission: faker.random.arrayElement([
+          organization_permission: faker.helpers.arrayElement([
             'read',
             'write',
             'admin',
@@ -80845,7 +80845,7 @@ export const handlers = [
         ctx.json({
           id: 1,
           account: null,
-          repository_selection: faker.random.arrayElement(['all', 'selected']),
+          repository_selection: faker.helpers.arrayElement(['all', 'selected']),
           access_tokens_url:
             'https://api.github.com/installations/1/access_tokens',
           repositories_url: 'https://api.github.com/installation/repositories',
@@ -81007,7 +81007,7 @@ export const handlers = [
             },
             created_at: '2011-04-10T20:09:31Z',
             updated_at: '2014-03-03T18:58:10Z',
-            organization_permission: faker.random.arrayElement([
+            organization_permission: faker.helpers.arrayElement([
               'read',
               'write',
               'admin',

@@ -43,13 +43,13 @@ function transformJSONSchemaToFakerCode(
   }
 
   if (Array.isArray(jsonSchema.type)) {
-    return `faker.random.arrayElement([${jsonSchema.type
+    return `faker.helpers.arrayElement([${jsonSchema.type
       .map(type => transformJSONSchemaToFakerCode({ ...jsonSchema, type }))
       .join(',')}])`;
   }
 
   if (jsonSchema.enum) {
-    return `faker.random.arrayElement(${JSON.stringify(jsonSchema.enum)})`;
+    return `faker.helpers.arrayElement(${JSON.stringify(jsonSchema.enum)})`;
   }
 
   switch (jsonSchema.type) {
